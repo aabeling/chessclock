@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>ChessClock</title>
+<script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="chessclock.js"></script>
+<link rel="stylesheet" type="text/css" href="chessclock.css">
+</head>
+<body onload="chessClock.reset()">
+  <div id="clock0" class="clock upper rotated" onclick="chessClock.clockClicked(0);">
+  	00:00
+  </div>
+  <hr>
+  <div id="reset" onclick="chessClock.reset();">Reset</div>
+  <hr>
+  <div id="clock1" class="clock lower" onclick="chessClock.clockClicked(1);">
+  	00:00
+  </div>
+</body>
+</html>

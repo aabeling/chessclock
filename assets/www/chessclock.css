@@ -1,0 +1,22 @@
+.clock {
+	font-size: 80pt;
+	text-align: center;
+	cursor: pointer;
+}
+
+.lower {
+	position:absolute; 
+	bottom:0;
+}
+.rotated {
+	-webkit-transform: rotate(-180deg); 
+	-moz-transform: rotate(-180deg);
+}
+
+.expired {
+	background-color: red;
+}
+
+#reset {
+	vertical-align: middle;
+}
