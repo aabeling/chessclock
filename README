@@ -1,2 +1,17 @@
-Uses phonegap to create an android app with
-HTML5, CSS and Javascript.
+A very simple chessclock for an android device
+using phonegap and pure HTML5+CSS3+Javascript.
+
+At the moment it only shows to clock starting at five minutes.
+On click on one of the clocks the clock starts to count down.
+When the clock is clicked again the other clock starts.
+When the time of one clock is expired it stops and is marked with
+a red background.
+
+It was just a first test of phonegap.
+
+To get it running you should do the following:
+- import the project into eclipse
+- Run as... Android Application
+
+The application can be installed from my public dropbox at
+http://dl.dropbox.com/u/24392681/apk/chessclock.apk
