@@ -13,10 +13,16 @@
 	-moz-transform: rotate(-180deg);
 }
 
+.running {
+	background-color: green;
+}
+
 .expired {
 	background-color: red;
 }
 
+
 #reset {
 	vertical-align: middle;
+	cursor: pointer;
 }

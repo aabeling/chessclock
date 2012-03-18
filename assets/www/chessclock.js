@@ -31,12 +31,19 @@ chessClock = {
 			this.status = "running";
 			this.currentClock = id;
 			this.setInterval();
+			this.addClass(this.currentClock, "running");
 			console.log("clock started: " + id);
 		} else if ( this.status == "running" ) {
 			/* clock is already running */
-			if ( this.currentClock != id ) {
+			if ( this.currentClock == id ) {
 				/* change the current clock */
-				this.currentClock = id;
+				this.removeClass(this.currentClock, "running");
+				if ( this.currentClock == 0 ) {
+					this.currentClock = 1;
+				} else {
+					this.currentClock = 0;
+				}
+				this.addClass(this.currentClock, "running");
 				console.log("clock changed: " + id);
 			}
 		} else {
@@ -113,11 +120,23 @@ chessClock = {
 		
 		/* change the class if time is up */
 		if ( time == 0 ) {
-			element.className += " expired";
+			this.addClass(id, "expired");
+			this.clearInterval();
 		} else {
 			/* remove the class "expired" */
-			element.className = element.className.replace( /expired/g , '' )
+			this.removeClass(id, "expired");
 		}
+	},
+	
+	addClass : function(id, className) {
+		element = document.getElementById("clock"+id);
+		element.className += " " + className;
+	},
+	
+	removeClass : function(id, className) {
+		element = document.getElementById("clock"+id);
+		exp = new RegExp(className);
+		element.className = element.className.replace( exp , '' );
 	},
 	
 	/**
