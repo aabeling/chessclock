@@ -98,6 +98,9 @@ chessClock = {
 				
 		this.clearInterval();
 		
+		this.removeClass(0, "running");
+		this.removeClass(1, "running");
+		
 		/* update the view */
 		this.updateView();
 	},
